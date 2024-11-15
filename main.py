@@ -51,6 +51,13 @@ while running:
     # 오른쪽 화살표 키
     if keys[pygame.K_RIGHT] and player['rect'].right < SCREEN_WIDTH:
         player['rect'].x += player['speed']
+    #위쪽 화살표 키
+    if keys[pygame.K_UP] and player['rect'].top > 0:
+        player['rect'].y -= player['speed']
+    #아래쪽 화살표 키
+    if keys[pygame.K_DOWN] and player['rect'].bottom < SCREEN_HEIGHT:
+        player['rect'].y += player['speed']
+    
     
     # 3. 게임 로직 업데이트
     # 적 이동
